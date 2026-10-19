@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Fármaco Actual</title>
+<style>
+  :root {
+    --bg: #f7f5f1;
+    --surface: #ffffff;
+    --border: #e2ddd2;
+    --fg: #1b1f1d;
+    --fg-muted: #5b6560;
+    --accent: #1f6f5c;
+    --accent-soft: #e4efe9;
+    --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --body: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14201b;
+      --surface: #1a2822;
+      --border: #2b3a33;
+      --fg: #eef2ef;
+      --fg-muted: #a7b5ae;
+      --accent: #6fd3ae;
+      --accent-soft: #203830;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14201b;
+    --surface: #1a2822;
+    --border: #2b3a33;
+    --fg: #eef2ef;
+    --fg-muted: #a7b5ae;
+    --accent: #6fd3ae;
+    --accent-soft: #203830;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body);
+    line-height: 1.6;
+    padding-inline: 16px;
+    padding-block: 48px;
+  }
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.1;
+    margin: 8px 0 4px;
+    text-wrap: balance;
+  }
+  .fecha {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+  .resumen {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+  }
+  section {
+    margin-bottom: 36px;
+  }
+  h2 {
+    font-family: var(--display);
+    font-size: 1.35rem;
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  p { margin: 0 0 12px; max-width: 65ch; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 8px; max-width: 62ch; }
+  .tabla-datos {
+    display: grid;
+    gap: 14px;
+  }
+  .fila-dato {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .fila-dato strong {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+  .fila-dato span {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+  }
+  a { color: var(--accent); }
+  .contacto {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--fg-muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Política de privacidad</p>
+  <h1>Fármaco Actual</h1>
+  <p class="fecha">Vigente desde el 19 de octubre de 2026</p>
+
+  <div class="resumen">
+    Fármaco Actual no pide cuenta ni contraseña. Tu perfil, tus noticias guardadas, tu
+    historial de lectura, tu país y tus preferencias se guardan únicamente en tu
+    dispositivo y no se suben a nuestros servidores. Para funcionar, la app usa servicios
+    de terceros (Firebase, Google AdMob y RevenueCat) que reciben datos técnicos, como tu
+    dirección IP, tal como se explica abajo.
+  </div>
+
+  <section>
+    <h2>Qué datos se guardan en tu dispositivo</h2>
+    <div class="tabla-datos">
+      <div class="fila-dato">
+        <strong>Perfil (nombre, rol profesional, foto)</strong>
+        <span>Solo en este dispositivo. No requiere cuenta ni verificación de identidad.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Noticias guardadas e historial de lectura</strong>
+        <span>Solo en este dispositivo, para mostrarte tus métricas y tu meta semanal de lectura.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Carpetas y notas (Premium)</strong>
+        <span>Solo en este dispositivo: las carpetas que creas y las notas que escribes en tus noticias guardadas.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>País seleccionado, temas que sigues, paleta de colores y preferencias de notificaciones</strong>
+        <span>Solo en este dispositivo, para mostrarte noticias de tu región y avisarte de lo que elegiste.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Último estado conocido de tu suscripción Premium</strong>
+        <span>Solo en este dispositivo, para no mostrarte anuncios si estás sin conexión.</span>
+      </div>
+    </div>
+    <p style="margin-top:14px;">
+      Estos datos no salen de tu dispositivo hacia nosotros. La app tampoco los incluye en las
+      copias de seguridad automáticas de Android: los excluimos explícitamente de ese mecanismo.
+      Se eliminan cuando desinstalas la app o borras sus datos desde los ajustes de Android.
+    </p>
+  </section>
+
+  <section>
+    <h2>Notificaciones</h2>
+    <p>
+      Las notificaciones son gratuitas. Puedes recibir dos tipos, y elegir cuáles en la pantalla
+      Notificaciones de la app:
+    </p>
+    <ul>
+      <li><strong>Alertas urgentes por país</strong>, como retiros de mercado y alertas de seguridad
+        de las autoridades sanitarias. Se envían con Firebase Cloud Messaging a un grupo de
+        suscripción (<em>topic</em>) por país: al activarlas, tu dispositivo se suscribe al grupo
+        del país que elegiste, y al desactivarlas o cambiar de país, se da de baja. Tu
+        suscripción revela el país que elegiste, pero no tu identidad.</li>
+      <li><strong>Cápsula semanal</strong>, un resumen de las noticias de tu semana. Se programa y se
+        arma en tu propio dispositivo con las noticias públicas de tu país (que descarga de
+        Firestore, como el resto de la app); no usa Firebase Cloud Messaging ni envía datos tuyos
+        a nuestros servidores.</li>
+    </ul>
+    <p>
+      Android te pide permiso para mostrar notificaciones. Puedes retirarlo en cualquier momento
+      desde los ajustes del sistema.
+    </p>
+  </section>
+
+  <section>
+    <h2>Servicios de terceros que usa la app</h2>
+    <p>
+      Estos servicios reciben datos técnicos de tu dispositivo cuando la app los usa. Cada uno
+      trata esos datos según su propia política, enlazada abajo.
+    </p>
+    <div class="tabla-datos">
+      <div class="fila-dato">
+        <strong>Google Firebase — Cloud Firestore y Storage</strong>
+        <span>Descargan las noticias públicas y sus imágenes a tu dispositivo. Es una descarga de
+          lectura; no subimos información tuya. Como en cualquier conexión, Google recibe tu
+          dirección IP y datos técnicos de la solicitud.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Google Firebase — App Check y Play Integrity</strong>
+        <span>Comprueban que las solicitudes vienen de la app original instalada desde Google Play,
+          para proteger la base de datos de abusos. Envían a Google una señal de integridad de la
+          app y del dispositivo, sin datos personales tuyos.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Google Firebase — Cloud Messaging (FCM)</strong>
+        <span>Entrega las alertas urgentes. Usa un identificador de instalación anónimo y las
+          suscripciones por país descritas arriba.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Google AdMob</strong>
+        <span>Muestra anuncios a quienes usan el plan gratuito. Puede usar el identificador de
+          publicidad de tu dispositivo, tu dirección IP y datos técnicos del dispositivo para
+          mostrar y medir anuncios. Si estás en el Espacio Económico Europeo, el Reino Unido o
+          Suiza, la app te pide tu consentimiento antes de mostrar anuncios (mediante la
+          plataforma de mensajes de usuarios de Google, UMP) y puedes cambiar tu decisión en
+          Ajustes › Preferencias de privacidad de anuncios. En cualquier país puedes restablecer
+          o eliminar tu identificador de publicidad en los ajustes de Android. Con Premium no
+          se muestran anuncios.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>RevenueCat y Google Play Billing</strong>
+        <span>Gestionan la suscripción Premium. RevenueCat recibe un identificador anónimo de
+          usuario, el estado y el historial de tus compras de la app, y datos técnicos básicos.
+          El pago lo procesa Google Play: nosotros nunca vemos los datos de tu tarjeta.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Google Translate (solo si tú lo eliges)</strong>
+        <span>Algunas noticias están en inglés y se traducen automáticamente antes de llegar a la
+          app. Si además tocas «Abrir traducido con Google Translate» en una noticia, el enlace de
+          la fuente se abre a través de ese servicio de Google, que recibe esa dirección y tu IP.
+          Si no usas esa opción, no se envía nada a Google Translate desde tu dispositivo.</span>
+      </div>
+    </div>
+    <p style="margin-top:14px;">
+      Políticas de privacidad:
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google (Firebase, AdMob, Play y Translate)</a>
+      ·
+      <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a>.
+    </p>
+    <p>
+      Cuando tocas «Leer en…» se abre el sitio de la fuente original (por ejemplo, una agencia
+      sanitaria), que tiene su propia política de privacidad. Estos servicios pueden tratar datos
+      en países distintos al tuyo, como Estados Unidos.
+    </p>
+  </section>
+
+  <section>
+    <h2>Qué no recopilamos</h2>
+    <ul>
+      <li>No hay registro de usuario, inicio de sesión ni contraseña.</li>
+      <li>No recopilamos datos de salud personales tuyos ni de terceros.</li>
+      <li>No usamos herramientas de analítica de comportamiento ni de reporte de fallos de
+        terceros (no hay Google Analytics ni Crashlytics en la app).</li>
+      <li>No vendemos datos personales.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Permisos que pide la app</h2>
+    <ul>
+      <li><strong>Internet</strong> — para traer las noticias, mostrar anuncios y comprobar tu
+        suscripción.</li>
+      <li><strong>Notificaciones</strong> — opcional, solo si activas las alertas o la cápsula
+        semanal.</li>
+      <li><strong>Identificador de publicidad</strong> — lo declara el SDK de anuncios; puedes
+        restablecerlo o eliminarlo desde los ajustes de Android.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tus derechos</h2>
+    <p>
+      Como tus datos personales viven en tu dispositivo, puedes revisarlos, cambiarlos o borrarlos
+      tú mismo desde la app o desinstalándola. Para lo que tratan los servicios de terceros
+      (por ejemplo, el historial de compras en RevenueCat o los datos de anuncios), puedes
+      pedirnos acceso, corrección o eliminación escribiendo al contacto indicado abajo, y
+      nosotros gestionaremos la solicitud con el proveedor correspondiente. Según donde vivas
+      se aplican la Ley N.º 19.628 de Chile o el Reglamento General de Protección de Datos
+      (RGPD) en la Unión Europea y el Reino Unido, que te dan además el derecho a reclamar ante
+      tu autoridad de protección de datos.
+    </p>
+  </section>
+
+  <section>
+    <h2>A quién está dirigida</h2>
+    <p>
+      Fármaco Actual está pensada para profesionales de la salud y del área farmacéutica y para
+      personas interesadas en información sanitaria. No está dirigida a menores de 14 años ni
+      diseñada para recopilar información de ellos. Si crees que un menor nos dio datos, escríbenos
+      y los eliminaremos.
+    </p>
+  </section>
+
+  <section>
+    <h2>Esto no es consejo médico</h2>
+    <p>
+      Fármaco Actual es una herramienta de curación de noticias regulatorias y científicas. No es
+      un dispositivo médico, no diagnostica ni trata ninguna condición y no reemplaza el criterio
+      profesional ni las fuentes oficiales citadas en cada noticia.
+    </p>
+  </section>
+
+  <section>
+    <h2>Cambios a esta política</h2>
+    <p>
+      Si la actualizamos, cambiaremos la fecha de vigencia que aparece al comienzo de esta misma
+      página. Si el cambio es importante, además lo avisaremos dentro de la app.
+    </p>
+  </section>
+
+  <div class="contacto">
+    <strong>¿Preguntas sobre esta política?</strong>
+    <p style="margin-top:8px; margin-bottom:0;">Escríbenos a <a href="mailto:vulcanoedicionessa@gmail.com">vulcanoedicionessa@gmail.com</a>. Responsable: Vulcano Ediciones SpA (Chile).</p>
+  </div>
+
+  <footer>
+    Fármaco Actual no es un dispositivo médico y no reemplaza el criterio profesional.
+    Consulta también los <a href="terminos.html">términos de uso</a>.
+  </footer>
+</main>
+</body>
+</html>
