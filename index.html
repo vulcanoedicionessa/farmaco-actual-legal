@@ -1,7 +1,82 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fármaco Actual — documentos legales</title>
-<style>body{font-family:system-ui,sans-serif;max-width:560px;margin:48px auto;padding:0 16px;line-height:1.5;color:#10272D}a{color:#146F68}</style></head>
-<body><h1>Fármaco Actual</h1><p>Documentos legales de la app.</p>
-<ul><li><a href="privacidad.html">Política de privacidad</a></li><li><a href="terminos.html">Términos de uso</a></li></ul>
-<p>Contacto: <a href="mailto:vulcanoedicionessa@gmail.com">vulcanoedicionessa@gmail.com</a></p></body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fármaco Actual — noticias regulatorias y científicas del medicamento</title>
+<meta name="description" content="Fármaco Actual reúne alertas y retiros de mercado, aprobaciones, proyectos de ley, estudios y cursos para quienes trabajan con medicamentos. Contacto: vulcanoedicionessa@gmail.com">
+<style>
+  :root {
+    --bg: #f7f5f1; --surface: #ffffff; --border: #e2ddd2; --fg: #1b1f1d; --fg-muted: #5b6560;
+    --accent: #1f6f5c; --accent-soft: #e4efe9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14201b; --surface: #1a2822; --border: #2b3a33; --fg: #eef2ef; --fg-muted: #a7b5ae; --accent: #6fd3ae; --accent-soft: #203830; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; line-height: 1.6; }
+  header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header { padding-top: 48px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-size: 2.4rem; margin: 0 0 8px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; margin: 40px 0 8px; }
+  p, li { color: var(--fg-muted); }
+  a { color: var(--accent); }
+  nav { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; font-size: .95rem; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; margin-top: 16px; }
+  .contacto { border-color: var(--accent); background: var(--accent-soft); }
+  .contacto p, .contacto li { color: var(--fg); }
+  ul { padding-left: 20px; }
+  footer { padding: 32px 20px 56px; font-size: .9rem; color: var(--fg-muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Fármaco Actual</h1>
+  <p>Noticias regulatorias y científicas del medicamento, en español y al día.</p>
+  <nav>
+    <a href="#que-es">Qué es</a>
+    <a href="#fuentes">Fuentes</a>
+    <a href="#contacto">Contacto</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="terminos.html">Términos de uso</a>
+  </nav>
+</header>
+
+<main>
+  <section id="que-es">
+    <h2>Qué es</h2>
+    <p>Fármaco Actual es una app para Android que reúne en un solo lugar las noticias que importan a quien trabaja con medicamentos: alertas y retiros de mercado, nuevas aprobaciones, proyectos de ley, estudios recientes y novedades de la profesión. Cada noticia lleva un enlace a su fuente oficial, y los textos en inglés se traducen automáticamente, con el original siempre a un toque.</p>
+    <p>También incluye cursos breves sobre normativa farmacéutica chilena, con tests, tarjetas y preguntas de verdadero o falso.</p>
+    <p>Es una herramienta informativa: no es un dispositivo médico, no diagnostica ni trata ninguna condición y no reemplaza el criterio profesional ni las fuentes oficiales.</p>
+  </section>
+
+  <section id="fuentes">
+    <h2>Fuentes</h2>
+    <p>Fármaco Actual no produce las noticias: las recopila de organismos y medios públicos y enlaza siempre al original. Entre ellas:</p>
+    <ul>
+      <li>Autoridades sanitarias: FDA (Estados Unidos), EMA (Unión Europea), MHRA (Reino Unido), Health Canada, ISP y Minsal (Chile), AEMPS (España).</li>
+      <li>Salud pública: CDC, ECDC, UKHSA y NHS England.</li>
+      <li>Investigación: PubMed, Europe PMC y PLOS Medicine.</li>
+      <li>Regulación en Chile: Congreso Nacional y Cenabast.</li>
+    </ul>
+    <p>Estas organizaciones no respaldan la app ni están afiliadas a ella.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="card contacto">
+      <p><strong>¿Dudas, sugerencias o correcciones?</strong> Escríbenos y respondemos personalmente.</p>
+      <ul>
+        <li>Correo: <a href="mailto:vulcanoedicionessa@gmail.com">vulcanoedicionessa@gmail.com</a></li>
+        <li>Responsable de la app: Vulcano Ediciones SpA (Chile)</li>
+        <li>Para pedir la eliminación de datos o ejercer tus derechos de privacidad, usa el mismo correo; el detalle está en la <a href="privacidad.html">política de privacidad</a>.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© Vulcano Ediciones SpA · <a href="privacidad.html">Política de privacidad</a> · <a href="terminos.html">Términos de uso</a> · <a href="mailto:vulcanoedicionessa@gmail.com">Contacto</a></p>
+</footer>
+</body>
+</html>
