@@ -131,11 +131,11 @@
 <main>
   <p class="eyebrow">Política de privacidad</p>
   <h1>Fármaco Actual</h1>
-  <p class="fecha">Vigente desde el 19 de octubre de 2026</p>
+  <p class="fecha">Vigente desde el 7 de noviembre de 2026</p>
 
   <div class="resumen">
     Fármaco Actual no pide cuenta ni contraseña. Tu perfil, tus noticias guardadas, tu
-    historial de lectura, tu país y tus preferencias se guardan únicamente en tu
+    historial de lectura, tu progreso en los cursos, tu país y tus preferencias se guardan únicamente en tu
     dispositivo y no se suben a nuestros servidores. Para funcionar, la app usa servicios
     de terceros (Firebase, Google AdMob y RevenueCat) que reciben datos técnicos, como tu
     dirección IP, tal como se explica abajo.
@@ -157,8 +157,16 @@
         <span>Solo en este dispositivo: las carpetas que creas y las notas que escribes en tus noticias guardadas.</span>
       </div>
       <div class="fila-dato">
-        <strong>País seleccionado, temas que sigues, paleta de colores y preferencias de notificaciones</strong>
+        <strong>País seleccionado, temas que sigues, paleta de colores, preferencias de notificaciones y si activaste las alertas de insumos médicos</strong>
         <span>Solo en este dispositivo, para mostrarte noticias de tu región y avisarte de lo que elegiste.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Tu progreso en los cursos: lecciones leídas, mejor puntaje de cada test, estado de las tarjetas de repaso, cápsula del día y cursos con cápsula diaria activada</strong>
+        <span>Solo en este dispositivo, para que continúes donde quedaste y repases lo que corresponde. No se envía a ningún servidor ni a una cuenta.</span>
+      </div>
+      <div class="fila-dato">
+        <strong>Tu último resultado del quiz de fármacos y los días en que respondiste la pregunta del día (tu racha)</strong>
+        <span>Solo en este dispositivo, para mostrarte tu progreso y tu racha, también en el widget. No se envía a ningún servidor ni a una cuenta.</span>
       </div>
       <div class="fila-dato">
         <strong>Último estado conocido de tu suscripción Premium</strong>
@@ -167,7 +175,8 @@
     </div>
     <p style="margin-top:14px;">
       Estos datos no salen de tu dispositivo hacia nosotros. La app tampoco los incluye en las
-      copias de seguridad automáticas de Android: los excluimos explícitamente de ese mecanismo.
+      copias de seguridad automáticas de Android ni los transfiere a otro teléfono al configurarlo:
+      los excluimos explícitamente de ambos mecanismos.
       Se eliminan cuando desinstalas la app o borras sus datos desde los ajustes de Android.
     </p>
   </section>
@@ -175,19 +184,23 @@
   <section>
     <h2>Notificaciones</h2>
     <p>
-      Las notificaciones son gratuitas. Puedes recibir dos tipos, y elegir cuáles en la pantalla
+      Las notificaciones son gratuitas. Puedes recibir tres tipos, y elegir cuáles en la pantalla
       Notificaciones de la app:
     </p>
     <ul>
       <li><strong>Alertas urgentes por país</strong>, como retiros de mercado y alertas de seguridad
         de las autoridades sanitarias. Se envían con Firebase Cloud Messaging a un grupo de
-        suscripción (<em>topic</em>) por país: al activarlas, tu dispositivo se suscribe al grupo
-        del país que elegiste, y al desactivarlas o cambiar de país, se da de baja. Tu
-        suscripción revela el país que elegiste, pero no tu identidad.</li>
+        suscripción (<em>topic</em>) por país. Vienen activadas por defecto: al abrir la app, tu
+        dispositivo se suscribe al grupo del país que elegiste; al desactivarlas o cambiar de
+        país, se da de baja. Tu suscripción revela el país que elegiste, pero no tu identidad.</li>
       <li><strong>Cápsula semanal</strong>, un resumen de las noticias de tu semana. Se programa y se
         arma en tu propio dispositivo con las noticias públicas de tu país (que descarga de
         Firestore, como el resto de la app); no usa Firebase Cloud Messaging ni envía datos tuyos
         a nuestros servidores.</li>
+      <li><strong>Recordatorio de la racha</strong>, un aviso a las 20:00 (hora de tu teléfono) solo
+        si respondiste la pregunta del día ayer y hoy todavía no. Viene desactivado: lo enciendes tú.
+        Se programa y se decide por completo en tu dispositivo con tu racha guardada ahí; no usa
+        Firebase Cloud Messaging ni envía datos tuyos a nuestros servidores.</li>
     </ul>
     <p>
       Android te pide permiso para mostrar notificaciones. Puedes retirarlo en cualquier momento
@@ -216,14 +229,18 @@
       </div>
       <div class="fila-dato">
         <strong>Google Firebase — Cloud Messaging (FCM)</strong>
-        <span>Entrega las alertas urgentes. Usa un identificador de instalación anónimo y las
-          suscripciones por país descritas arriba.</span>
+        <span>Entrega las alertas urgentes. Usa un identificador de instalación (seudónimo: no
+          incluye tu nombre, pero sigue siendo un dato personal) y las suscripciones por país
+          descritas arriba.</span>
       </div>
       <div class="fila-dato">
         <strong>Google AdMob</strong>
         <span>Muestra anuncios a quienes usan el plan gratuito. Puede usar el identificador de
           publicidad de tu dispositivo, tu dirección IP y datos técnicos del dispositivo para
-          mostrar y medir anuncios. Si estás en el Espacio Económico Europeo, el Reino Unido o
+          mostrar y medir anuncios, además de datos de interacción y diagnóstico con los anuncios
+          que Google usa para medirlos y mejorar sus servicios. En Android 13 y posteriores el
+          SDK de anuncios puede usar las API de privacidad de Android (AdServices: temas y
+          atribución) si están activas en tu dispositivo. Si estás en el Espacio Económico Europeo, el Reino Unido o
           Suiza, la app te pide tu consentimiento antes de mostrar anuncios (mediante la
           plataforma de mensajes de usuarios de Google, UMP) y puedes cambiar tu decisión en
           Ajustes › Preferencias de privacidad de anuncios. En cualquier país puedes restablecer
@@ -232,8 +249,8 @@
       </div>
       <div class="fila-dato">
         <strong>RevenueCat y Google Play Billing</strong>
-        <span>Gestionan la suscripción Premium. RevenueCat recibe un identificador anónimo de
-          usuario, el estado y el historial de tus compras de la app, y datos técnicos básicos.
+        <span>Gestionan la suscripción Premium. RevenueCat recibe un identificador seudónimo de
+          usuario (no incluye tu nombre), el estado y el historial de tus compras de la app, y datos técnicos básicos.
           El pago lo procesa Google Play: nosotros nunca vemos los datos de tu tarjeta.</span>
       </div>
       <div class="fila-dato">
@@ -262,8 +279,10 @@
     <ul>
       <li>No hay registro de usuario, inicio de sesión ni contraseña.</li>
       <li>No recopilamos datos de salud personales tuyos ni de terceros.</li>
-      <li>No usamos herramientas de analítica de comportamiento ni de reporte de fallos de
-        terceros (no hay Google Analytics ni Crashlytics en la app).</li>
+      <li>No incluimos en la app Google Analytics, Crashlytics ni otra herramienta propia de
+        analítica de comportamiento o de reporte de fallos. Los servicios de anuncios y de
+        suscripción descritos arriba (AdMob y RevenueCat) sí tratan datos técnicos y de uso para
+        prestar su servicio y medir anuncios, según sus propias políticas.</li>
       <li>No vendemos datos personales.</li>
     </ul>
   </section>
@@ -273,24 +292,51 @@
     <ul>
       <li><strong>Internet</strong> — para traer las noticias, mostrar anuncios y comprobar tu
         suscripción.</li>
-      <li><strong>Notificaciones</strong> — opcional, solo si activas las alertas o la cápsula
-        semanal.</li>
+      <li><strong>Notificaciones</strong> — opcional, solo si activas las alertas, la cápsula
+        semanal o el recordatorio de la racha.</li>
       <li><strong>Identificador de publicidad</strong> — lo declara el SDK de anuncios; puedes
         restablecerlo o eliminarlo desde los ajustes de Android.</li>
     </ul>
   </section>
 
   <section>
+    <h2>Base legal y conservación</h2>
+    <p>
+      Tratamos los datos técnicos que exige el funcionamiento de la app (descargar noticias,
+      comprobar la suscripción, entregar alertas) para prestarte el servicio que pides, y los
+      anuncios personalizados solo con tu consentimiento cuando la ley lo exige (por ejemplo, en el
+      Espacio Económico Europeo, el Reino Unido y Suiza). Lo que guarda la app en tu dispositivo
+      se conserva hasta que lo borres, desinstales la app o borres sus datos. Lo que tratan
+      Google y RevenueCat se conserva según sus propias políticas; el historial de compras puede
+      conservarse el tiempo que exijan las obligaciones contables y de pago.
+    </p>
+  </section>
+
+  <section>
     <h2>Tus derechos</h2>
     <p>
       Como tus datos personales viven en tu dispositivo, puedes revisarlos, cambiarlos o borrarlos
-      tú mismo desde la app o desinstalándola. Para lo que tratan los servicios de terceros
-      (por ejemplo, el historial de compras en RevenueCat o los datos de anuncios), puedes
-      pedirnos acceso, corrección o eliminación escribiendo al contacto indicado abajo, y
-      nosotros gestionaremos la solicitud con el proveedor correspondiente. Según donde vivas
-      se aplican la Ley N.º 19.628 de Chile o el Reglamento General de Protección de Datos
-      (RGPD) en la Unión Europea y el Reino Unido, que te dan además el derecho a reclamar ante
-      tu autoridad de protección de datos.
+      tú mismo desde la app o desinstalándola. Según donde vivas, tienes derecho de acceso,
+      rectificación, supresión, oposición, portabilidad, limitación (bloqueo) del tratamiento y,
+      cuando el tratamiento se base en tu consentimiento, a retirarlo en cualquier momento (en la
+      app: Ajustes › Preferencias de privacidad de anuncios). Para lo que tratan los servicios de
+      terceros (por ejemplo, el historial de compras en RevenueCat o los datos de anuncios),
+      puedes pedírnoslo escribiendo al contacto indicado abajo, y nosotros gestionaremos la
+      solicitud con el proveedor correspondiente. Para pedir que se borren tus datos en
+      RevenueCat, indícanos el número de pedido de Google Play (empieza con «GPA.») que aparece
+      en tu recibo, para poder encontrarlos.
+    </p>
+    <p>
+      Se aplican la Ley N.º 19.628 de Chile (y la Ley N.º 21.719, desde que entra en vigencia el
+      1 de diciembre de 2026) o el Reglamento General de Protección de Datos (RGPD) en la Unión
+      Europea y el Reino Unido. Tienes además derecho a reclamar ante la autoridad de protección
+      de datos de tu país: en Chile, la Agencia de Protección de Datos Personales una vez que
+      esté en funcionamiento; en la Unión Europea, tu autoridad nacional.
+    </p>
+    <p>
+      Algunos proveedores (Google, RevenueCat) tratan datos en Estados Unidos y otros países. Lo
+      hacen con las garantías que cada uno declara en su política de privacidad enlazada arriba
+      (por ejemplo, cláusulas contractuales tipo).
     </p>
   </section>
 
